@@ -2,6 +2,11 @@ name: Test External Fast Forward Composite Action
 on:
   issue_comment:
     types: [created, edited]
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  
 jobs:
   fast-forward:
     runs-on: ubuntu-latest
