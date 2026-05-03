@@ -8,7 +8,7 @@ jobs:
     if: ${{ contains(github.event.comment.body, '/fast-forward') 
         && github.event.issue.pull_request }}
     steps:
-      - uses: LuneiSolei/fast-forward-composite-action@main
+      - uses: LuneiSolei/fast-forward-composite-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           merge: true
