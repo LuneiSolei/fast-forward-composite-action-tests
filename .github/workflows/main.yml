@@ -1,14 +1,12 @@
 name: Test External Fast Forward Composite Action
 on:
   issue_comment:
-    types: created
-
+    types: [created, edited]
 jobs:
-  test:
+  fast-forward:
     runs-on: ubuntu-latest
-    if: |
-      github.event.issue.pull_request &&
-      contains(github.event.comment.body, '/fast-forward')
+    if: ${{ contains(github.event.comment.body, '/fast-forward') 
+        && github.event.issue.pull_request }}
     steps:
       - uses: LuneiSolei/fast-forward-composite-action@main
         with:
