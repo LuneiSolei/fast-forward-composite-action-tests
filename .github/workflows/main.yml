@@ -16,6 +16,6 @@ jobs:
       - uses: LuneiSolei/fast-forward-composite-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          merge: true
+          auto_merge: true
           debug: false
           comment: always
