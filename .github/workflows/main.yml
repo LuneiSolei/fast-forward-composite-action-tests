@@ -1,5 +1,9 @@
 name: Test External Fast Forward Composite Action
 on:
+  pull_request:
+    branches:
+      - master
+    types: [opened, edited, synchronize]
   issue_comment:
     types: [created, edited]
 permissions:
