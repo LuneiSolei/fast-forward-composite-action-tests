@@ -13,8 +13,9 @@ jobs:
     if: ${{ contains(github.event.comment.body, '/fast-forward') 
         && github.event.issue.pull_request }}
     steps:
-      - uses: LuneiSolei/fast-forward-composite-action@master
+      - uses: LuneiSolei/Fast-Forward-Blossom-Bot@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           auto_merge: true
           comment: always
+          custom_command: /fast-forward
